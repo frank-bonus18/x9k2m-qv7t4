@@ -1,0 +1,2174 @@
+{
+ "version": 1,
+ "conventions": {
+  "albedo": "sRGB colour, KTX2 carries the sRGB transfer function (use SRGBColorSpace)",
+  "normal": "tangent-space, OpenGL convention (+Y up, green = up), linear (NoColorSpace); z is not guaranteed unit length after ETC1S compression, renormalise in the shader",
+  "orm": "linear packed: R = ambient occlusion, G = roughness, B = metalness (NoColorSpace)",
+  "sizes": [
+   512,
+   1024
+  ],
+  "square": true,
+  "tiling": "seamless in both axes; wrap = repeat",
+  "ktx2": "Basis Universal ETC1S + mipmaps (all 3 maps), transcode to BC7/ASTC/ETC2 with three KTX2Loader",
+  "webp": "lossy WebP fallback, no mipmaps (generate at runtime)"
+ },
+ "materials": [
+  {
+   "name": "baseboard",
+   "layerHint": "BASEBOARD",
+   "worldSizeM": 0.75,
+   "worldSizeBasis": "ambientCG dimensions (75 cm)",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "baseboard/albedo_512.ktx2",
+       "bytes": 47259
+      },
+      "normal": {
+       "path": "baseboard/normal_512.ktx2",
+       "bytes": 56404
+      },
+      "orm": {
+       "path": "baseboard/orm_512.ktx2",
+       "bytes": 25386
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "baseboard/albedo_512.webp",
+       "bytes": 43042
+      },
+      "normal": {
+       "path": "baseboard/normal_512.webp",
+       "bytes": 106574
+      },
+      "orm": {
+       "path": "baseboard/orm_512.webp",
+       "bytes": 27146
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "baseboard/albedo_1024.ktx2",
+       "bytes": 165599
+      },
+      "normal": {
+       "path": "baseboard/normal_1024.ktx2",
+       "bytes": 205329
+      },
+      "orm": {
+       "path": "baseboard/orm_1024.ktx2",
+       "bytes": 90337
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "baseboard/albedo_1024.webp",
+       "bytes": 160094
+      },
+      "normal": {
+       "path": "baseboard/normal_1024.webp",
+       "bytes": 556190
+      },
+      "orm": {
+       "path": "baseboard/orm_1024.webp",
+       "bytes": 182050
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Rubber004",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Recoloured to dark brown vinyl/rubber cove base.",
+   "meanAlbedoLinearLuminance": 0.06
+  },
+  {
+   "name": "blue_paint",
+   "layerHint": "BLUE_PAINT",
+   "worldSizeM": 1.2,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "blue_paint/albedo_512.ktx2",
+       "bytes": 32867
+      },
+      "normal": {
+       "path": "blue_paint/normal_512.ktx2",
+       "bytes": 26860
+      },
+      "orm": {
+       "path": "blue_paint/orm_512.ktx2",
+       "bytes": 39433
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "blue_paint/albedo_512.webp",
+       "bytes": 4534
+      },
+      "normal": {
+       "path": "blue_paint/normal_512.webp",
+       "bytes": 14212
+      },
+      "orm": {
+       "path": "blue_paint/orm_512.webp",
+       "bytes": 46132
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "blue_paint/albedo_1024.ktx2",
+       "bytes": 113358
+      },
+      "normal": {
+       "path": "blue_paint/normal_1024.ktx2",
+       "bytes": 134366
+      },
+      "orm": {
+       "path": "blue_paint/orm_1024.ktx2",
+       "bytes": 137947
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "blue_paint/albedo_1024.webp",
+       "bytes": 17516
+      },
+      "normal": {
+       "path": "blue_paint/normal_1024.webp",
+       "bytes": 100996
+      },
+      "orm": {
+       "path": "blue_paint/orm_1024.webp",
+       "bytes": 149088
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/PaintedPlaster002",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Saturation reduced (school-corridor blue lower wall, chipped paint).",
+   "meanAlbedoLinearLuminance": 0.1
+  },
+  {
+   "name": "brushed_metal",
+   "layerHint": "METAL",
+   "worldSizeM": 1.0,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "brushed_metal/albedo_512.ktx2",
+       "bytes": 34240
+      },
+      "normal": {
+       "path": "brushed_metal/normal_512.ktx2",
+       "bytes": 3346
+      },
+      "orm": {
+       "path": "brushed_metal/orm_512.ktx2",
+       "bytes": 34872
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "brushed_metal/albedo_512.webp",
+       "bytes": 9726
+      },
+      "normal": {
+       "path": "brushed_metal/normal_512.webp",
+       "bytes": 3300
+      },
+      "orm": {
+       "path": "brushed_metal/orm_512.webp",
+       "bytes": 39958
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "brushed_metal/albedo_1024.ktx2",
+       "bytes": 113327
+      },
+      "normal": {
+       "path": "brushed_metal/normal_1024.ktx2",
+       "bytes": 53690
+      },
+      "orm": {
+       "path": "brushed_metal/orm_1024.ktx2",
+       "bytes": 117464
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "brushed_metal/albedo_1024.webp",
+       "bytes": 32646
+      },
+      "normal": {
+       "path": "brushed_metal/normal_1024.webp",
+       "bytes": 53082
+      },
+      "orm": {
+       "path": "brushed_metal/orm_1024.webp",
+       "bytes": 154984
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Metal009",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "White-balance neutralised, brightness normalised.",
+   "meanAlbedoLinearLuminance": 0.34
+  },
+  {
+   "name": "cardboard",
+   "layerHint": "CARDBOARD",
+   "worldSizeM": 1.0,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "cardboard/albedo_512.ktx2",
+       "bytes": 32111
+      },
+      "normal": {
+       "path": "cardboard/normal_512.ktx2",
+       "bytes": 21955
+      },
+      "orm": {
+       "path": "cardboard/orm_512.ktx2",
+       "bytes": 20606
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "cardboard/albedo_512.webp",
+       "bytes": 1570
+      },
+      "normal": {
+       "path": "cardboard/normal_512.webp",
+       "bytes": 13952
+      },
+      "orm": {
+       "path": "cardboard/orm_512.webp",
+       "bytes": 22262
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "cardboard/albedo_1024.ktx2",
+       "bytes": 121990
+      },
+      "normal": {
+       "path": "cardboard/normal_1024.ktx2",
+       "bytes": 136187
+      },
+      "orm": {
+       "path": "cardboard/orm_1024.ktx2",
+       "bytes": 87251
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "cardboard/albedo_1024.webp",
+       "bytes": 12790
+      },
+      "normal": {
+       "path": "cardboard/normal_1024.webp",
+       "bytes": 78916
+      },
+      "orm": {
+       "path": "cardboard/orm_1024.webp",
+       "bytes": 58546
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Cardboard002",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Switched from the patchy Cardboard001 to the plain Cardboard002; low-frequency variation removed and contrast softened (high-pass), brightness normalised.",
+   "meanAlbedoLinearLuminance": 0.26
+  },
+  {
+   "name": "carpet_damp",
+   "layerHint": "CARPET_DAMP",
+   "worldSizeM": 1.0,
+   "worldSizeBasis": "1.0 m crop of a 1.7 m ambientCG scan (Carpet016, ambientCG dimensions 170 cm)",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "carpet_damp/albedo_512.ktx2",
+       "bytes": 41150
+      },
+      "normal": {
+       "path": "carpet_damp/normal_512.ktx2",
+       "bytes": 62363
+      },
+      "orm": {
+       "path": "carpet_damp/orm_512.ktx2",
+       "bytes": 16860
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "carpet_damp/albedo_512.webp",
+       "bytes": 11966
+      },
+      "normal": {
+       "path": "carpet_damp/normal_512.webp",
+       "bytes": 104328
+      },
+      "orm": {
+       "path": "carpet_damp/orm_512.webp",
+       "bytes": 5802
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "carpet_damp/albedo_1024.ktx2",
+       "bytes": 137977
+      },
+      "normal": {
+       "path": "carpet_damp/normal_1024.ktx2",
+       "bytes": 211284
+      },
+      "orm": {
+       "path": "carpet_damp/orm_1024.ktx2",
+       "bytes": 78803
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "carpet_damp/albedo_1024.webp",
+       "bytes": 37912
+      },
+      "normal": {
+       "path": "carpet_damp/normal_1024.webp",
+       "bytes": 265716
+      },
+      "orm": {
+       "path": "carpet_damp/orm_1024.webp",
+       "bytes": 24728
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Carpet016",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Low-pile commercial carpet scan: central ~1.0 m crop made tileable again with a variance-preserving wrap blend, low-frequency variation removed (high-pass), tinted to dull mustard-khaki, normal strength x0.55, roughness about 0.9. No baked stains: damp is a world-space shader mask.",
+   "meanAlbedoLinearLuminance": 0.105
+  },
+  {
+   "name": "ceiling_tile",
+   "layerHint": "CEIL_TILE",
+   "worldSizeM": 3.85,
+   "worldSizeBasis": "ambientCG dimensions (385 cm), about 6 tiles of 0.6 m",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "ceiling_tile/albedo_512.ktx2",
+       "bytes": 14579
+      },
+      "normal": {
+       "path": "ceiling_tile/normal_512.ktx2",
+       "bytes": 56499
+      },
+      "orm": {
+       "path": "ceiling_tile/orm_512.ktx2",
+       "bytes": 31044
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "ceiling_tile/albedo_512.webp",
+       "bytes": 1876
+      },
+      "normal": {
+       "path": "ceiling_tile/normal_512.webp",
+       "bytes": 80526
+      },
+      "orm": {
+       "path": "ceiling_tile/orm_512.webp",
+       "bytes": 26236
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "ceiling_tile/albedo_1024.ktx2",
+       "bytes": 39169
+      },
+      "normal": {
+       "path": "ceiling_tile/normal_1024.ktx2",
+       "bytes": 196294
+      },
+      "orm": {
+       "path": "ceiling_tile/orm_1024.ktx2",
+       "bytes": 111989
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "ceiling_tile/albedo_1024.webp",
+       "bytes": 4924
+      },
+      "normal": {
+       "path": "ceiling_tile/normal_1024.webp",
+       "bytes": 395446
+      },
+      "orm": {
+       "path": "ceiling_tile/orm_1024.webp",
+       "bytes": 139576
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/OfficeCeiling001",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "White-balance neutralised only. Grid of acoustic tiles with a few sprinkler/vent squares.",
+   "meanAlbedoLinearLuminance": 0.42
+  },
+  {
+   "name": "concrete_floor",
+   "layerHint": "CONCRETE",
+   "worldSizeM": 2.0,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "concrete_floor/albedo_512.ktx2",
+       "bytes": 44916
+      },
+      "normal": {
+       "path": "concrete_floor/normal_512.ktx2",
+       "bytes": 60157
+      },
+      "orm": {
+       "path": "concrete_floor/orm_512.ktx2",
+       "bytes": 43228
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "concrete_floor/albedo_512.webp",
+       "bytes": 34706
+      },
+      "normal": {
+       "path": "concrete_floor/normal_512.webp",
+       "bytes": 86720
+      },
+      "orm": {
+       "path": "concrete_floor/orm_512.webp",
+       "bytes": 62376
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "concrete_floor/albedo_1024.ktx2",
+       "bytes": 154583
+      },
+      "normal": {
+       "path": "concrete_floor/normal_1024.ktx2",
+       "bytes": 208679
+      },
+      "orm": {
+       "path": "concrete_floor/orm_1024.ktx2",
+       "bytes": 153961
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "concrete_floor/albedo_1024.webp",
+       "bytes": 215948
+      },
+      "normal": {
+       "path": "concrete_floor/normal_1024.webp",
+       "bytes": 487722
+      },
+      "orm": {
+       "path": "concrete_floor/orm_1024.webp",
+       "bytes": 252006
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Concrete023",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Replaced the cloudy Concrete019 with the smoother trowelled Concrete023; low-frequency albedo/roughness variation removed (high-pass), white-balance neutralised. Wet patches are a world-space shader mask now.",
+   "meanAlbedoLinearLuminance": 0.14
+  },
+  {
+   "name": "concrete_wall",
+   "layerHint": "CONCRETE_WALL (new)",
+   "worldSizeM": 2.0,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "concrete_wall/albedo_512.ktx2",
+       "bytes": 36518
+      },
+      "normal": {
+       "path": "concrete_wall/normal_512.ktx2",
+       "bytes": 63277
+      },
+      "orm": {
+       "path": "concrete_wall/orm_512.ktx2",
+       "bytes": 29966
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "concrete_wall/albedo_512.webp",
+       "bytes": 5434
+      },
+      "normal": {
+       "path": "concrete_wall/normal_512.webp",
+       "bytes": 72970
+      },
+      "orm": {
+       "path": "concrete_wall/orm_512.webp",
+       "bytes": 26862
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "concrete_wall/albedo_1024.ktx2",
+       "bytes": 118216
+      },
+      "normal": {
+       "path": "concrete_wall/normal_1024.ktx2",
+       "bytes": 201416
+      },
+      "orm": {
+       "path": "concrete_wall/orm_1024.ktx2",
+       "bytes": 102108
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "concrete_wall/albedo_1024.webp",
+       "bytes": 23470
+      },
+      "normal": {
+       "path": "concrete_wall/normal_1024.webp",
+       "bytes": 232496
+      },
+      "orm": {
+       "path": "concrete_wall/orm_1024.webp",
+       "bytes": 78408
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Concrete034",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "White-balance neutralised, brightness normalised.",
+   "meanAlbedoLinearLuminance": 0.2
+  },
+  {
+   "name": "crate_wood",
+   "layerHint": "CRATE_WOOD (new)",
+   "worldSizeM": 0.6,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "crate_wood/albedo_512.ktx2",
+       "bytes": 49469
+      },
+      "normal": {
+       "path": "crate_wood/normal_512.ktx2",
+       "bytes": 50096
+      },
+      "orm": {
+       "path": "crate_wood/orm_512.ktx2",
+       "bytes": 39838
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "crate_wood/albedo_512.webp",
+       "bytes": 39490
+      },
+      "normal": {
+       "path": "crate_wood/normal_512.webp",
+       "bytes": 52388
+      },
+      "orm": {
+       "path": "crate_wood/orm_512.webp",
+       "bytes": 67644
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "crate_wood/albedo_1024.ktx2",
+       "bytes": 171493
+      },
+      "normal": {
+       "path": "crate_wood/normal_1024.ktx2",
+       "bytes": 188192
+      },
+      "orm": {
+       "path": "crate_wood/orm_1024.ktx2",
+       "bytes": 147416
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "crate_wood/albedo_1024.webp",
+       "bytes": 140166
+      },
+      "normal": {
+       "path": "crate_wood/normal_1024.webp",
+       "bytes": 374142
+      },
+      "orm": {
+       "path": "crate_wood/orm_1024.webp",
+       "bytes": 246888
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Chipboard006",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Slightly desaturated and darkened (OSB/chipboard crate look).",
+   "meanAlbedoLinearLuminance": 0.2
+  },
+  {
+   "name": "cubicle_fabric",
+   "layerHint": "FABRIC",
+   "worldSizeM": 0.5,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "cubicle_fabric/albedo_512.ktx2",
+       "bytes": 49344
+      },
+      "normal": {
+       "path": "cubicle_fabric/normal_512.ktx2",
+       "bytes": 68096
+      },
+      "orm": {
+       "path": "cubicle_fabric/orm_512.ktx2",
+       "bytes": 31885
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "cubicle_fabric/albedo_512.webp",
+       "bytes": 64108
+      },
+      "normal": {
+       "path": "cubicle_fabric/normal_512.webp",
+       "bytes": 136824
+      },
+      "orm": {
+       "path": "cubicle_fabric/orm_512.webp",
+       "bytes": 43826
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "cubicle_fabric/albedo_1024.ktx2",
+       "bytes": 169272
+      },
+      "normal": {
+       "path": "cubicle_fabric/normal_1024.ktx2",
+       "bytes": 240157
+      },
+      "orm": {
+       "path": "cubicle_fabric/orm_1024.ktx2",
+       "bytes": 116067
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "cubicle_fabric/albedo_1024.webp",
+       "bytes": 284608
+      },
+      "normal": {
+       "path": "cubicle_fabric/normal_1024.webp",
+       "bytes": 686938
+      },
+      "orm": {
+       "path": "cubicle_fabric/orm_1024.webp",
+       "bytes": 218122
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Fabric043",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Tinted blue-grey (office partition felt).",
+   "meanAlbedoLinearLuminance": 0.1
+  },
+  {
+   "name": "desk_laminate",
+   "layerHint": "WOOD",
+   "worldSizeM": 1.83,
+   "worldSizeBasis": "Poly Haven dimensions (1830 mm)",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "desk_laminate/albedo_512.ktx2",
+       "bytes": 43493
+      },
+      "normal": {
+       "path": "desk_laminate/normal_512.ktx2",
+       "bytes": 15208
+      },
+      "orm": {
+       "path": "desk_laminate/orm_512.ktx2",
+       "bytes": 37933
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "desk_laminate/albedo_512.webp",
+       "bytes": 18958
+      },
+      "normal": {
+       "path": "desk_laminate/normal_512.webp",
+       "bytes": 7582
+      },
+      "orm": {
+       "path": "desk_laminate/orm_512.webp",
+       "bytes": 35420
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "desk_laminate/albedo_1024.ktx2",
+       "bytes": 155429
+      },
+      "normal": {
+       "path": "desk_laminate/normal_1024.ktx2",
+       "bytes": 112699
+      },
+      "orm": {
+       "path": "desk_laminate/orm_1024.ktx2",
+       "bytes": 148319
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "desk_laminate/albedo_1024.webp",
+       "bytes": 73888
+      },
+      "normal": {
+       "path": "desk_laminate/normal_1024.webp",
+       "bytes": 61118
+      },
+      "orm": {
+       "path": "desk_laminate/orm_1024.webp",
+       "bytes": 149296
+      }
+     }
+    }
+   },
+   "source": "Poly Haven",
+   "sourceUrl": "https://polyhaven.com/a/oak_veneer_01",
+   "author": "Jenelle van Heerden",
+   "license": "CC0 1.0",
+   "modifications": "Desaturated slightly (laminate desk-top look); packed ARM map reused as AO/roughness/metalness.",
+   "meanAlbedoLinearLuminance": 0.22
+  },
+  {
+   "name": "door_steel",
+   "layerHint": "DOOR_STEEL",
+   "worldSizeM": 1.0,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "door_steel/albedo_512.ktx2",
+       "bytes": 34071
+      },
+      "normal": {
+       "path": "door_steel/normal_512.ktx2",
+       "bytes": 19032
+      },
+      "orm": {
+       "path": "door_steel/orm_512.ktx2",
+       "bytes": 37742
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "door_steel/albedo_512.webp",
+       "bytes": 3360
+      },
+      "normal": {
+       "path": "door_steel/normal_512.webp",
+       "bytes": 12418
+      },
+      "orm": {
+       "path": "door_steel/orm_512.webp",
+       "bytes": 43754
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "door_steel/albedo_1024.ktx2",
+       "bytes": 119308
+      },
+      "normal": {
+       "path": "door_steel/normal_1024.ktx2",
+       "bytes": 109652
+      },
+      "orm": {
+       "path": "door_steel/orm_1024.ktx2",
+       "bytes": 134762
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "door_steel/albedo_1024.webp",
+       "bytes": 15190
+      },
+      "normal": {
+       "path": "door_steel/normal_1024.webp",
+       "bytes": 127754
+      },
+      "orm": {
+       "path": "door_steel/orm_1024.webp",
+       "bytes": 147806
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Metal046A",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Tinted dark green (typical anti-theft steel door paint), brightness normalised.",
+   "meanAlbedoLinearLuminance": 0.06
+  },
+  {
+   "name": "door_wood",
+   "layerHint": "DOOR_WOOD",
+   "worldSizeM": 1.0,
+   "worldSizeBasis": "Poly Haven dimensions (1000 mm)",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "door_wood/albedo_512.ktx2",
+       "bytes": 47673
+      },
+      "normal": {
+       "path": "door_wood/normal_512.ktx2",
+       "bytes": 42938
+      },
+      "orm": {
+       "path": "door_wood/orm_512.ktx2",
+       "bytes": 13378
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "door_wood/albedo_512.webp",
+       "bytes": 19874
+      },
+      "normal": {
+       "path": "door_wood/normal_512.webp",
+       "bytes": 29002
+      },
+      "orm": {
+       "path": "door_wood/orm_512.webp",
+       "bytes": 3778
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "door_wood/albedo_1024.ktx2",
+       "bytes": 162853
+      },
+      "normal": {
+       "path": "door_wood/normal_1024.ktx2",
+       "bytes": 164882
+      },
+      "orm": {
+       "path": "door_wood/orm_1024.ktx2",
+       "bytes": 46173
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "door_wood/albedo_1024.webp",
+       "bytes": 71364
+      },
+      "normal": {
+       "path": "door_wood/normal_1024.webp",
+       "bytes": 190330
+      },
+      "orm": {
+       "path": "door_wood/orm_1024.webp",
+       "bytes": 12276
+      }
+     }
+    }
+   },
+   "source": "Poly Haven",
+   "sourceUrl": "https://polyhaven.com/a/wood_shutter",
+   "author": "Dimitrios Savva",
+   "license": "CC0 1.0",
+   "modifications": "Brightness normalised; packed ARM map reused.",
+   "meanAlbedoLinearLuminance": 0.075
+  },
+  {
+   "name": "drywall",
+   "layerHint": "DRYWALL (new)",
+   "worldSizeM": 1.5,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "drywall/albedo_512.ktx2",
+       "bytes": 36346
+      },
+      "normal": {
+       "path": "drywall/normal_512.ktx2",
+       "bytes": 67844
+      },
+      "orm": {
+       "path": "drywall/orm_512.ktx2",
+       "bytes": 35545
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "drywall/albedo_512.webp",
+       "bytes": 3226
+      },
+      "normal": {
+       "path": "drywall/normal_512.webp",
+       "bytes": 139524
+      },
+      "orm": {
+       "path": "drywall/orm_512.webp",
+       "bytes": 60800
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "drywall/albedo_1024.ktx2",
+       "bytes": 132279
+      },
+      "normal": {
+       "path": "drywall/normal_1024.ktx2",
+       "bytes": 231605
+      },
+      "orm": {
+       "path": "drywall/orm_1024.ktx2",
+       "bytes": 130638
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "drywall/albedo_1024.webp",
+       "bytes": 27218
+      },
+      "normal": {
+       "path": "drywall/normal_1024.webp",
+       "bytes": 476710
+      },
+      "orm": {
+       "path": "drywall/orm_1024.webp",
+       "bytes": 200602
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/PaintedPlaster017",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "White-balance neutralised, brightness normalised.",
+   "meanAlbedoLinearLuminance": 0.42
+  },
+  {
+   "name": "green_paint",
+   "layerHint": "GREEN_PAINT",
+   "worldSizeM": 2.0,
+   "worldSizeBasis": "Poly Haven dimensions (2000 mm)",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "green_paint/albedo_512.ktx2",
+       "bytes": 46094
+      },
+      "normal": {
+       "path": "green_paint/normal_512.ktx2",
+       "bytes": 12291
+      },
+      "orm": {
+       "path": "green_paint/orm_512.ktx2",
+       "bytes": 37043
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "green_paint/albedo_512.webp",
+       "bytes": 25124
+      },
+      "normal": {
+       "path": "green_paint/normal_512.webp",
+       "bytes": 8522
+      },
+      "orm": {
+       "path": "green_paint/orm_512.webp",
+       "bytes": 18026
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "green_paint/albedo_1024.ktx2",
+       "bytes": 157112
+      },
+      "normal": {
+       "path": "green_paint/normal_1024.ktx2",
+       "bytes": 115740
+      },
+      "orm": {
+       "path": "green_paint/orm_1024.ktx2",
+       "bytes": 134052
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "green_paint/albedo_1024.webp",
+       "bytes": 119324
+      },
+      "normal": {
+       "path": "green_paint/normal_1024.webp",
+       "bytes": 71838
+      },
+      "orm": {
+       "path": "green_paint/orm_1024.webp",
+       "bytes": 101534
+      }
+     }
+    }
+   },
+   "source": "Poly Haven",
+   "sourceUrl": "https://polyhaven.com/a/painted_concrete",
+   "author": "Dario Barresi (processing), Dimitrios Savva (photography)",
+   "license": "CC0 1.0",
+   "modifications": "Low-frequency variation removed and contrast reduced so the chips do not read as a repeating motif; saturation reduced (muted institutional oil-paint green); packed ARM map reused.",
+   "meanAlbedoLinearLuminance": 0.09
+  },
+  {
+   "name": "metal_grating",
+   "layerHint": "GRATING (new)",
+   "worldSizeM": 0.6,
+   "worldSizeBasis": "estimated (grating pitch about 4 cm)",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "metal_grating/albedo_512.ktx2",
+       "bytes": 35196
+      },
+      "normal": {
+       "path": "metal_grating/normal_512.ktx2",
+       "bytes": 22674
+      },
+      "orm": {
+       "path": "metal_grating/orm_512.ktx2",
+       "bytes": 39979
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "metal_grating/albedo_512.webp",
+       "bytes": 29158
+      },
+      "normal": {
+       "path": "metal_grating/normal_512.webp",
+       "bytes": 42860
+      },
+      "orm": {
+       "path": "metal_grating/orm_512.webp",
+       "bytes": 81476
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "metal_grating/albedo_1024.ktx2",
+       "bytes": 112104
+      },
+      "normal": {
+       "path": "metal_grating/normal_1024.ktx2",
+       "bytes": 84682
+      },
+      "orm": {
+       "path": "metal_grating/orm_1024.ktx2",
+       "bytes": 156571
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "metal_grating/albedo_1024.webp",
+       "bytes": 83442
+      },
+      "normal": {
+       "path": "metal_grating/normal_1024.webp",
+       "bytes": 119864
+      },
+      "orm": {
+       "path": "metal_grating/orm_1024.webp",
+       "bytes": 231498
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/MetalWalkway001",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Brightness normalised. The source Opacity map (holes) is not shipped.",
+   "meanAlbedoLinearLuminance": 0.08
+  },
+  {
+   "name": "office_carpet",
+   "layerHint": "OFFICE_CARPET",
+   "worldSizeM": 1.0,
+   "worldSizeBasis": "layers.rs (2x2 carpet tiles of 0.5 m)",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "office_carpet/albedo_512.ktx2",
+       "bytes": 48622
+      },
+      "normal": {
+       "path": "office_carpet/normal_512.ktx2",
+       "bytes": 76837
+      },
+      "orm": {
+       "path": "office_carpet/orm_512.ktx2",
+       "bytes": 37578
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "office_carpet/albedo_512.webp",
+       "bytes": 107608
+      },
+      "normal": {
+       "path": "office_carpet/normal_512.webp",
+       "bytes": 170628
+      },
+      "orm": {
+       "path": "office_carpet/orm_512.webp",
+       "bytes": 88046
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "office_carpet/albedo_1024.ktx2",
+       "bytes": 176022
+      },
+      "normal": {
+       "path": "office_carpet/normal_1024.ktx2",
+       "bytes": 274651
+      },
+      "orm": {
+       "path": "office_carpet/orm_1024.ktx2",
+       "bytes": 151469
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "office_carpet/albedo_1024.webp",
+       "bytes": 428548
+      },
+      "normal": {
+       "path": "office_carpet/normal_1024.webp",
+       "bytes": 742500
+      },
+      "orm": {
+       "path": "office_carpet/orm_1024.webp",
+       "bytes": 274354
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Carpet012",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Cut into 2x2 carpet tiles (0.5 m) from random wrapped crops of the source, per-tile brightness jitter (+-3%), low-frequency variation removed (high-pass), dark seams in albedo, normal and AO, tinted blue-grey.",
+   "meanAlbedoLinearLuminance": 0.09
+  },
+  {
+   "name": "painted_metal_tunnel",
+   "layerHint": "PAINTED_METAL (new)",
+   "worldSizeM": 1.0,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "painted_metal_tunnel/albedo_512.ktx2",
+       "bytes": 46273
+      },
+      "normal": {
+       "path": "painted_metal_tunnel/normal_512.ktx2",
+       "bytes": 66120
+      },
+      "orm": {
+       "path": "painted_metal_tunnel/orm_512.ktx2",
+       "bytes": 37628
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "painted_metal_tunnel/albedo_512.webp",
+       "bytes": 25604
+      },
+      "normal": {
+       "path": "painted_metal_tunnel/normal_512.webp",
+       "bytes": 96214
+      },
+      "orm": {
+       "path": "painted_metal_tunnel/orm_512.webp",
+       "bytes": 54652
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "painted_metal_tunnel/albedo_1024.ktx2",
+       "bytes": 157595
+      },
+      "normal": {
+       "path": "painted_metal_tunnel/normal_1024.ktx2",
+       "bytes": 223725
+      },
+      "orm": {
+       "path": "painted_metal_tunnel/orm_1024.ktx2",
+       "bytes": 133507
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "painted_metal_tunnel/albedo_1024.webp",
+       "bytes": 86636
+      },
+      "normal": {
+       "path": "painted_metal_tunnel/normal_1024.webp",
+       "bytes": 460886
+      },
+      "orm": {
+       "path": "painted_metal_tunnel/orm_1024.webp",
+       "bytes": 158304
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/PaintedMetal014",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Desaturated (dirty grey-green painted steel), low-frequency variation removed and contrast softened, brightness normalised.",
+   "meanAlbedoLinearLuminance": 0.09
+  },
+  {
+   "name": "party_carpet",
+   "layerHint": "CARPET_PARTY (new)",
+   "worldSizeM": 1.0,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "party_carpet/albedo_512.ktx2",
+       "bytes": 46998
+      },
+      "normal": {
+       "path": "party_carpet/normal_512.ktx2",
+       "bytes": 68445
+      },
+      "orm": {
+       "path": "party_carpet/orm_512.ktx2",
+       "bytes": 32163
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "party_carpet/albedo_512.webp",
+       "bytes": 45160
+      },
+      "normal": {
+       "path": "party_carpet/normal_512.webp",
+       "bytes": 142074
+      },
+      "orm": {
+       "path": "party_carpet/orm_512.webp",
+       "bytes": 68026
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "party_carpet/albedo_1024.ktx2",
+       "bytes": 162600
+      },
+      "normal": {
+       "path": "party_carpet/normal_1024.ktx2",
+       "bytes": 242735
+      },
+      "orm": {
+       "path": "party_carpet/orm_1024.ktx2",
+       "bytes": 127198
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "party_carpet/albedo_1024.webp",
+       "bytes": 222056
+      },
+      "normal": {
+       "path": "party_carpet/normal_1024.webp",
+       "bytes": 697870
+      },
+      "orm": {
+       "path": "party_carpet/orm_1024.webp",
+       "bytes": 276706
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Carpet007",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Low-frequency mottling removed (high-pass), brightness normalised (mint polka-dot party carpet).",
+   "meanAlbedoLinearLuminance": 0.5
+  },
+  {
+   "name": "party_wallpaper",
+   "layerHint": "WALLPAPER_PARTY (new)",
+   "worldSizeM": 1.0,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "party_wallpaper/albedo_512.ktx2",
+       "bytes": 19988
+      },
+      "normal": {
+       "path": "party_wallpaper/normal_512.ktx2",
+       "bytes": 28877
+      },
+      "orm": {
+       "path": "party_wallpaper/orm_512.ktx2",
+       "bytes": 29917
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "party_wallpaper/albedo_512.webp",
+       "bytes": 4398
+      },
+      "normal": {
+       "path": "party_wallpaper/normal_512.webp",
+       "bytes": 15586
+      },
+      "orm": {
+       "path": "party_wallpaper/orm_512.webp",
+       "bytes": 17086
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "party_wallpaper/albedo_1024.ktx2",
+       "bytes": 57668
+      },
+      "normal": {
+       "path": "party_wallpaper/normal_1024.ktx2",
+       "bytes": 76822
+      },
+      "orm": {
+       "path": "party_wallpaper/orm_1024.ktx2",
+       "bytes": 94665
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "party_wallpaper/albedo_1024.webp",
+       "bytes": 9656
+      },
+      "normal": {
+       "path": "party_wallpaper/normal_1024.webp",
+       "bytes": 36782
+      },
+      "orm": {
+       "path": "party_wallpaper/orm_1024.webp",
+       "bytes": 39610
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Paper003",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Pastel pink/cream vertical stripe wallpaper composited procedurally (period 128 px) over a Paper003 grain, white pinstripes and small dots, pattern added to normal map.",
+   "meanAlbedoLinearLuminance": 0.46
+  },
+  {
+   "name": "plaster",
+   "layerHint": "PLASTER",
+   "worldSizeM": 1.5,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "plaster/albedo_512.ktx2",
+       "bytes": 32596
+      },
+      "normal": {
+       "path": "plaster/normal_512.ktx2",
+       "bytes": 63816
+      },
+      "orm": {
+       "path": "plaster/orm_512.ktx2",
+       "bytes": 37731
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "plaster/albedo_512.webp",
+       "bytes": 2188
+      },
+      "normal": {
+       "path": "plaster/normal_512.webp",
+       "bytes": 106506
+      },
+      "orm": {
+       "path": "plaster/orm_512.webp",
+       "bytes": 46944
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "plaster/albedo_1024.ktx2",
+       "bytes": 125564
+      },
+      "normal": {
+       "path": "plaster/normal_1024.ktx2",
+       "bytes": 220963
+      },
+      "orm": {
+       "path": "plaster/orm_1024.ktx2",
+       "bytes": 129734
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "plaster/albedo_1024.webp",
+       "bytes": 16282
+      },
+      "normal": {
+       "path": "plaster/normal_1024.webp",
+       "bytes": 545818
+      },
+      "orm": {
+       "path": "plaster/orm_1024.webp",
+       "bytes": 157378
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Plaster001",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Switched to the smoother Plaster001; low-frequency grime variation removed and contrast softened (high-pass), white-balance neutralised, brightness normalised.",
+   "meanAlbedoLinearLuminance": 0.38
+  },
+  {
+   "name": "plastic",
+   "layerHint": "PLASTIC_RED (tint in shader)",
+   "worldSizeM": 0.5,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "plastic/albedo_512.ktx2",
+       "bytes": 18654
+      },
+      "normal": {
+       "path": "plastic/normal_512.ktx2",
+       "bytes": 1082
+      },
+      "orm": {
+       "path": "plastic/orm_512.ktx2",
+       "bytes": 31966
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "plastic/albedo_512.webp",
+       "bytes": 1766
+      },
+      "normal": {
+       "path": "plastic/normal_512.webp",
+       "bytes": 918
+      },
+      "orm": {
+       "path": "plastic/orm_512.webp",
+       "bytes": 19370
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "plastic/albedo_1024.ktx2",
+       "bytes": 116168
+      },
+      "normal": {
+       "path": "plastic/normal_1024.ktx2",
+       "bytes": 129795
+      },
+      "orm": {
+       "path": "plastic/orm_1024.ktx2",
+       "bytes": 97667
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "plastic/albedo_1024.webp",
+       "bytes": 9626
+      },
+      "normal": {
+       "path": "plastic/normal_1024.webp",
+       "bytes": 244134
+      },
+      "orm": {
+       "path": "plastic/orm_1024.webp",
+       "bytes": 228086
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Plastic018A",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Neutral grey base; tint per object in the shader (vertex colour).",
+   "meanAlbedoLinearLuminance": 0.3
+  },
+  {
+   "name": "pool_tile",
+   "layerHint": "POOL_TILE",
+   "worldSizeM": 0.8,
+   "worldSizeBasis": "estimated (about 25 mm mosaic tiles)",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "pool_tile/albedo_512.ktx2",
+       "bytes": 38009
+      },
+      "normal": {
+       "path": "pool_tile/normal_512.ktx2",
+       "bytes": 35209
+      },
+      "orm": {
+       "path": "pool_tile/orm_512.ktx2",
+       "bytes": 27731
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "pool_tile/albedo_512.webp",
+       "bytes": 11768
+      },
+      "normal": {
+       "path": "pool_tile/normal_512.webp",
+       "bytes": 37492
+      },
+      "orm": {
+       "path": "pool_tile/orm_512.webp",
+       "bytes": 27302
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "pool_tile/albedo_1024.ktx2",
+       "bytes": 111146
+      },
+      "normal": {
+       "path": "pool_tile/normal_1024.ktx2",
+       "bytes": 110480
+      },
+      "orm": {
+       "path": "pool_tile/orm_1024.ktx2",
+       "bytes": 99290
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "pool_tile/albedo_1024.webp",
+       "bytes": 29548
+      },
+      "normal": {
+       "path": "pool_tile/normal_1024.webp",
+       "bytes": 133798
+      },
+      "orm": {
+       "path": "pool_tile/orm_1024.webp",
+       "bytes": 84328
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Tiles133B",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Cool cast removed (neutralised to white), brightness normalised.",
+   "meanAlbedoLinearLuminance": 0.4
+  },
+  {
+   "name": "rust_pipe",
+   "layerHint": "RUST_PIPE (new)",
+   "worldSizeM": 1.0,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "rust_pipe/albedo_512.ktx2",
+       "bytes": 39895
+      },
+      "normal": {
+       "path": "rust_pipe/normal_512.ktx2",
+       "bytes": 57619
+      },
+      "orm": {
+       "path": "rust_pipe/orm_512.ktx2",
+       "bytes": 40254
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "rust_pipe/albedo_512.webp",
+       "bytes": 7958
+      },
+      "normal": {
+       "path": "rust_pipe/normal_512.webp",
+       "bytes": 72426
+      },
+      "orm": {
+       "path": "rust_pipe/orm_512.webp",
+       "bytes": 43290
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "rust_pipe/albedo_1024.ktx2",
+       "bytes": 137940
+      },
+      "normal": {
+       "path": "rust_pipe/normal_1024.ktx2",
+       "bytes": 199646
+      },
+      "orm": {
+       "path": "rust_pipe/orm_1024.ktx2",
+       "bytes": 138423
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "rust_pipe/albedo_1024.webp",
+       "bytes": 29246
+      },
+      "normal": {
+       "path": "rust_pipe/normal_1024.webp",
+       "bytes": 399070
+      },
+      "orm": {
+       "path": "rust_pipe/orm_1024.webp",
+       "bytes": 144724
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Rust003",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Low-frequency variation removed and contrast softened (high-pass), brightness normalised.",
+   "meanAlbedoLinearLuminance": 0.07
+  },
+  {
+   "name": "terrazzo",
+   "layerHint": "TERRAZZO",
+   "worldSizeM": 1.0,
+   "worldSizeBasis": "estimated",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "terrazzo/albedo_512.ktx2",
+       "bytes": 48570
+      },
+      "normal": {
+       "path": "terrazzo/normal_512.ktx2",
+       "bytes": 33571
+      },
+      "orm": {
+       "path": "terrazzo/orm_512.ktx2",
+       "bytes": 40439
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "terrazzo/albedo_512.webp",
+       "bytes": 39744
+      },
+      "normal": {
+       "path": "terrazzo/normal_512.webp",
+       "bytes": 24658
+      },
+      "orm": {
+       "path": "terrazzo/orm_512.webp",
+       "bytes": 40766
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "terrazzo/albedo_1024.ktx2",
+       "bytes": 168052
+      },
+      "normal": {
+       "path": "terrazzo/normal_1024.ktx2",
+       "bytes": 137044
+      },
+      "orm": {
+       "path": "terrazzo/orm_1024.ktx2",
+       "bytes": 139911
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "terrazzo/albedo_1024.webp",
+       "bytes": 137280
+      },
+      "normal": {
+       "path": "terrazzo/normal_1024.webp",
+       "bytes": 181562
+      },
+      "orm": {
+       "path": "terrazzo/orm_1024.webp",
+       "bytes": 140704
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Terrazzo004",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Brightness normalised. Brass divider strips are not part of the texture (engine geometry or decal).",
+   "meanAlbedoLinearLuminance": 0.28
+  },
+  {
+   "name": "tile_blue",
+   "layerHint": "TILE_BLUE",
+   "worldSizeM": 0.8,
+   "worldSizeBasis": "estimated (about 25 mm mosaic tiles)",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "tile_blue/albedo_512.ktx2",
+       "bytes": 37483
+      },
+      "normal": {
+       "path": "tile_blue/normal_512.ktx2",
+       "bytes": 37183
+      },
+      "orm": {
+       "path": "tile_blue/orm_512.ktx2",
+       "bytes": 29847
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "tile_blue/albedo_512.webp",
+       "bytes": 13532
+      },
+      "normal": {
+       "path": "tile_blue/normal_512.webp",
+       "bytes": 37122
+      },
+      "orm": {
+       "path": "tile_blue/orm_512.webp",
+       "bytes": 36274
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "tile_blue/albedo_1024.ktx2",
+       "bytes": 115904
+      },
+      "normal": {
+       "path": "tile_blue/normal_1024.ktx2",
+       "bytes": 106949
+      },
+      "orm": {
+       "path": "tile_blue/orm_1024.ktx2",
+       "bytes": 109656
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "tile_blue/albedo_1024.webp",
+       "bytes": 31824
+      },
+      "normal": {
+       "path": "tile_blue/normal_1024.webp",
+       "bytes": 138134
+      },
+      "orm": {
+       "path": "tile_blue/orm_1024.webp",
+       "bytes": 120016
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Tiles132B",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Desaturated blue, brightness normalised.",
+   "meanAlbedoLinearLuminance": 0.16
+  },
+  {
+   "name": "tile_wall",
+   "layerHint": "TILE_WALL",
+   "worldSizeM": 0.8,
+   "worldSizeBasis": "estimated (about 25 mm mosaic tiles)",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "tile_wall/albedo_512.ktx2",
+       "bytes": 28385
+      },
+      "normal": {
+       "path": "tile_wall/normal_512.ktx2",
+       "bytes": 35734
+      },
+      "orm": {
+       "path": "tile_wall/orm_512.ktx2",
+       "bytes": 24751
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "tile_wall/albedo_512.webp",
+       "bytes": 9050
+      },
+      "normal": {
+       "path": "tile_wall/normal_512.webp",
+       "bytes": 40084
+      },
+      "orm": {
+       "path": "tile_wall/orm_512.webp",
+       "bytes": 23194
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "tile_wall/albedo_1024.ktx2",
+       "bytes": 78849
+      },
+      "normal": {
+       "path": "tile_wall/normal_1024.ktx2",
+       "bytes": 113841
+      },
+      "orm": {
+       "path": "tile_wall/orm_1024.ktx2",
+       "bytes": 82742
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "tile_wall/albedo_1024.webp",
+       "bytes": 22850
+      },
+      "normal": {
+       "path": "tile_wall/normal_1024.webp",
+       "bytes": 139314
+      },
+      "orm": {
+       "path": "tile_wall/orm_1024.webp",
+       "bytes": 64156
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Tiles133A",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Cool cast removed (neutralised to white), brightness normalised.",
+   "meanAlbedoLinearLuminance": 0.45
+  },
+  {
+   "name": "wallpaper_yellow",
+   "layerHint": "WALLPAPER",
+   "worldSizeM": 1.5,
+   "worldSizeBasis": "layers.rs (photo scale unknown, estimated)",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "wallpaper_yellow/albedo_512.ktx2",
+       "bytes": 30229
+      },
+      "normal": {
+       "path": "wallpaper_yellow/normal_512.ktx2",
+       "bytes": 58658
+      },
+      "orm": {
+       "path": "wallpaper_yellow/orm_512.ktx2",
+       "bytes": 33217
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "wallpaper_yellow/albedo_512.webp",
+       "bytes": 5658
+      },
+      "normal": {
+       "path": "wallpaper_yellow/normal_512.webp",
+       "bytes": 77432
+      },
+      "orm": {
+       "path": "wallpaper_yellow/orm_512.webp",
+       "bytes": 41222
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "wallpaper_yellow/albedo_1024.ktx2",
+       "bytes": 108017
+      },
+      "normal": {
+       "path": "wallpaper_yellow/normal_1024.ktx2",
+       "bytes": 196381
+      },
+      "orm": {
+       "path": "wallpaper_yellow/orm_1024.ktx2",
+       "bytes": 119931
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "wallpaper_yellow/albedo_1024.webp",
+       "bytes": 15064
+      },
+      "normal": {
+       "path": "wallpaper_yellow/normal_1024.webp",
+       "bytes": 334574
+      },
+      "orm": {
+       "path": "wallpaper_yellow/orm_1024.webp",
+       "bytes": 134744
+      }
+     }
+    }
+   },
+   "source": "ambientCG",
+   "sourceUrl": "https://ambientcg.com/a/Wallpaper001B",
+   "author": "ambientCG (Lennart Demes and contributors)",
+   "license": "CC0 1.0",
+   "modifications": "Recoloured to mono yellow (luminance-preserving tint), tone-on-tone stripe and dot pattern composited procedurally (period 64 px), pattern added to the normal map, roughness raised. Source low-frequency streaks removed (high-pass) so only the faint stripe/dot print repeats.",
+   "meanAlbedoLinearLuminance": 0.4
+  },
+  {
+   "name": "water",
+   "layerHint": "WATER",
+   "worldSizeM": 2.0,
+   "worldSizeBasis": "layers.rs (procedural, any scale)",
+   "files": {
+    "512": {
+     "ktx2": {
+      "albedo": {
+       "path": "water/albedo_512.ktx2",
+       "bytes": 965
+      },
+      "normal": {
+       "path": "water/normal_512.ktx2",
+       "bytes": 74411
+      },
+      "orm": {
+       "path": "water/orm_512.ktx2",
+       "bytes": 966
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "water/albedo_512.webp",
+       "bytes": 544
+      },
+      "normal": {
+       "path": "water/normal_512.webp",
+       "bytes": 75044
+      },
+      "orm": {
+       "path": "water/orm_512.webp",
+       "bytes": 552
+      }
+     }
+    },
+    "1024": {
+     "ktx2": {
+      "albedo": {
+       "path": "water/albedo_1024.ktx2",
+       "bytes": 1269
+      },
+      "normal": {
+       "path": "water/normal_1024.ktx2",
+       "bytes": 236016
+      },
+      "orm": {
+       "path": "water/orm_1024.ktx2",
+       "bytes": 1270
+      }
+     },
+     "webp": {
+      "albedo": {
+       "path": "water/albedo_1024.webp",
+       "bytes": 1942
+      },
+      "normal": {
+       "path": "water/normal_1024.webp",
+       "bytes": 171460
+      },
+      "orm": {
+       "path": "water/orm_1024.webp",
+       "bytes": 1950
+      }
+     }
+    }
+   },
+   "source": "Procedural",
+   "sourceUrl": "",
+   "author": "Generated for this project (no third-party source)",
+   "license": "CC0 1.0 (own work)",
+   "modifications": "Fully procedural tileable ripple normal map (sum of three periodic noise octaves); flat turquoise albedo, roughness 0.05. Animate by scrolling two copies in the shader.",
+   "meanAlbedoLinearLuminance": 0.12
+  }
+ ],
+ "totals": {
+  "512": {
+   "ktx2": 3267521,
+   "webp": 3517238
+  },
+  "1024": {
+   "ktx2": 11844086,
+   "webp": 15038686
+  }
+ }
+}

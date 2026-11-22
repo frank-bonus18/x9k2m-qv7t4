@@ -1,0 +1,329 @@
+{
+ "note": "Resized copies of assets/backrooms-wiki images for the decal atlas; licences per entry.",
+ "zones": {
+  "yellow": [
+   "level-0-render-halls__Alfarex.webp",
+   "level-2-fluorescent-light__uetchy.webp",
+   "corridor-wainscot-yellow__Paul-Kavin-Grey.webp",
+   "almond-water-bottle__XTheLock.webp"
+  ],
+  "stairwell": [
+   "c67-stairwell-doors__TaRtaR0S.webp",
+   "apartment-lobby-gubong__Park-taeho.webp",
+   "level-13-apartment-hallway__machinecodeblue.webp",
+   "c405-empty-room__Ambersight.webp"
+  ],
+  "school": [
+   "classroom-empty-sunset__Yitzilitt.webp",
+   "courtyard-tiles-school__Pedro-liminal-spaces.webp",
+   "c47-classroom-dark__Ambersight.webp",
+   "corridor-emergency-exit__O-T.webp"
+  ],
+  "pool": [
+   "level-37-poolrooms-1__AnarkyMusic.webp",
+   "indoor-pool-biltmore__Warren-LeMay.webp",
+   "poolrooms-3d-render__Sarel-YT.webp",
+   "level-37-poolrooms-3__AnarkyMusic.webp"
+  ],
+  "office": [
+   "office-liminal-dim__ben-dalton.webp",
+   "office-empty-grey-carpet__Ged-Carroll.webp",
+   "level-21-condo-hallway__Joi-Ito.webp",
+   "corridor-orange-wanda__xiang-shi-gong-zhe-yue.webp"
+  ],
+  "habitable": [
+   "level-1-melbourne-carpark__Canley.webp",
+   "level-1-underground-condo-carpark__SunCon-Photos.webp",
+   "c242-underground-garage__Emperor-Killer.webp",
+   "almond-water-bottle__XTheLock.webp"
+  ],
+  "pipes": [
+   "level-2-utility-tunnel-pipes__Honza-Groh.webp",
+   "level-2-utility-tunnel-cables__Honza-Groh.webp",
+   "level-2-northbound-tunnel__Taber-Andrew-Bain.webp",
+   "level-2-fluorescent-light__uetchy.webp"
+  ],
+  "fun": [
+   "fun-party-poster__Robert-Goerman.webp",
+   "partygoer-drawing__Robert-Goerman.webp",
+   "fun-party-poster__Robert-Goerman.webp",
+   "partygoer-berserker-drawing__Robert-Goerman.webp"
+  ],
+  "run": [
+   "corridor-emergency-exit__O-T.webp",
+   "hound-concept-art__chompgwenarts.webp"
+  ],
+  "bathhouse": [
+   "shower-room-tiles__Park-taeho.webp",
+   "c1070-shower-window__Karry2011.webp",
+   "level-37-poolrooms-2__AnarkyMusic.webp",
+   "indoor-pool-biltmore__Warren-LeMay.webp"
+  ]
+ },
+ "images": {
+  "level-0-render-halls__Alfarex.webp": {
+   "source": "level-0-render-halls__Alfarex.jpg",
+   "title": "Level 0 render (lit halls), CC-compliant render for the wiki",
+   "author": "Alfarex",
+   "license": "CC BY-SA 4.0",
+   "filePage": "http://backrooms-wiki.wikidot.com/local--files/level-0/3",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "level-2-fluorescent-light__uetchy.webp": {
+   "source": "level-2-fluorescent-light__uetchy.jpg",
+   "title": "Fluorescent Light (wiki Level 2 image)",
+   "author": "uetchy",
+   "license": "CC BY 2.0",
+   "filePage": "https://www.flickr.com/photos/26613076@N07/8086370479",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "corridor-wainscot-yellow__Paul-Kavin-Grey.webp": {
+   "source": "corridor-wainscot-yellow__Paul-Kavin-Grey.webp",
+   "title": "Liminal space (aisle)",
+   "author": "Paul Kavin Grey",
+   "license": "CC BY 2.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Liminal_space_aisle.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "almond-water-bottle__XTheLock.webp": {
+   "source": "almond-water-bottle__XTheLock.webp",
+   "title": "Iron bottle (Object 1 Almond Water page)",
+   "author": "XTheLock_",
+   "license": "CC BY-SA 4.0",
+   "filePage": "https://backrooms-wiki.wikidot.com/local--files/object-1/Iron%20Bottle",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "c67-stairwell-doors__TaRtaR0S.webp": {
+   "source": "c67-stairwell-doors__TaRtaR0S.jpg",
+   "title": "Level C-67 “楼道”: dark steel doors in a stairwell",
+   "author": "TaRtaR0S",
+   "license": "CC BY-SA 3.0",
+   "filePage": "https://s2.loli.net/2022/02/20/wBemip8fWAEvs5b.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "apartment-lobby-gubong__Park-taeho.webp": {
+   "source": "apartment-lobby-gubong__Park-taeho.webp",
+   "title": "구봉마을 아파트 (-117wiki)",
+   "author": "Park taeho",
+   "license": "CC BY-SA 4.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:-117wiki.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "level-13-apartment-hallway__machinecodeblue.webp": {
+   "source": "level-13-apartment-hallway__machinecodeblue.jpg",
+   "title": "the apartment hallway (wiki Level 13 image)",
+   "author": "machinecodeblue",
+   "license": "CC BY-SA 2.0",
+   "filePage": "https://www.flickr.com/photos/12313953@N03/2180608704",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "c405-empty-room__Ambersight.webp": {
+   "source": "c405-empty-room__Ambersight.webp",
+   "title": "Level C-405 “暑梦”: empty ground-floor room",
+   "author": "Ambersight",
+   "license": "CC BY-SA 3.0",
+   "filePage": "https://s2.loli.net/2022/05/11/5GRJmbYp6lcHBiy.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "classroom-empty-sunset__Yitzilitt.webp": {
+   "source": "classroom-empty-sunset__Yitzilitt.webp",
+   "title": "Empty classroom with chairs on table in Har Nof",
+   "author": "Yitzilitt",
+   "license": "CC BY-SA 4.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Empty_classroom_with_chairs_on_table_in_Har_Nof.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "courtyard-tiles-school__Pedro-liminal-spaces.webp": {
+   "source": "courtyard-tiles-school__Pedro-liminal-spaces.jpg",
+   "title": "Liminal space (school-style paved yard)",
+   "author": "Pedro liminal spaces",
+   "license": "CC0 1.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Liminal_space.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "c47-classroom-dark__Ambersight.webp": {
+   "source": "c47-classroom-dark__Ambersight.jpg",
+   "title": "Level C-47 “单人学校”: dark classroom",
+   "author": "Ambersight",
+   "license": "CC BY-SA 3.0",
+   "filePage": "https://s2.loli.net/2022/04/13/UXlDp5WPZCwE3ah.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "corridor-emergency-exit__O-T.webp": {
+   "source": "corridor-emergency-exit__O-T.webp",
+   "title": "Liminal space emergency exit",
+   "author": "O T",
+   "license": "CC0 1.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Liminal_space_emergency_exit.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "level-37-poolrooms-1__AnarkyMusic.webp": {
+   "source": "level-37-poolrooms-1__AnarkyMusic.jpg",
+   "title": "Level 37 \"Sublimity\" Poolrooms-1",
+   "author": "u/AnarkyMusic",
+   "license": "CC BY-SA 4.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Backrooms_Level_37_%22Sublimity%22_Poolrooms-1.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "indoor-pool-biltmore__Warren-LeMay.webp": {
+   "source": "indoor-pool-biltmore__Warren-LeMay.webp",
+   "title": "Indoor Pool, Biltmore House, Biltmore Estate, Asheville, NC",
+   "author": "Warren LeMay",
+   "license": "CC0 1.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Indoor_Pool%2C_Biltmore_House%2C_Biltmore_Estate%2C_Asheville%2C_NC_%2846727962521%29.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "poolrooms-3d-render__Sarel-YT.webp": {
+   "source": "poolrooms-3d-render__Sarel-YT.png",
+   "title": "Rendu des poolrooms en 3D",
+   "author": "Sarel YT",
+   "license": "CC BY-SA 4.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Rendu_des_poolrooms_en_3D.png",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "level-37-poolrooms-3__AnarkyMusic.webp": {
+   "source": "level-37-poolrooms-3__AnarkyMusic.jpg",
+   "title": "Level 37 \"Sublimity\" Poolrooms-3",
+   "author": "u/AnarkyMusic",
+   "license": "CC BY-SA 4.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Backrooms_Level_37_%22Sublimity%22_Poolrooms-3.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "office-liminal-dim__ben-dalton.webp": {
+   "source": "office-liminal-dim__ben-dalton.webp",
+   "title": "Liminal Office",
+   "author": "ben dalton",
+   "license": "CC BY-SA 2.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Liminal_Office.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "office-empty-grey-carpet__Ged-Carroll.webp": {
+   "source": "office-empty-grey-carpet__Ged-Carroll.jpg",
+   "title": "Empty office",
+   "author": "Ged Carroll",
+   "license": "CC BY 2.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Empty_office.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "level-21-condo-hallway__Joi-Ito.webp": {
+   "source": "level-21-condo-hallway__Joi-Ito.jpg",
+   "title": "Hallway at Meridian Condo (wiki Level 21 image)",
+   "author": "Joi Ito",
+   "license": "CC BY 2.0",
+   "filePage": "https://www.flickr.com/photos/35034362831@N01/11258823445",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "corridor-orange-wanda__xiang-shi-gong-zhe-yue.webp": {
+   "source": "corridor-orange-wanda__xiang-shi-gong-zhe-yue.jpg",
+   "title": "湖边万达里的走廊 (corridor in a lakeside Wanda complex)",
+   "author": "向史公哲曰",
+   "license": "CC BY 4.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:%E6%B9%96%E8%BE%B9%E4%B8%87%E8%BE%BE%E9%87%8C%E7%9A%84%E8%B5%B0%E5%BB%8A.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "level-1-melbourne-carpark__Canley.webp": {
+   "source": "level-1-melbourne-carpark__Canley.webp",
+   "title": "Interior of the South Lawn car park, University of Melbourne (wiki Level 1 image)",
+   "author": "Canley",
+   "license": "CC BY-SA 4.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Melbourne_Uni_underground_carpark_interior.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "level-1-underground-condo-carpark__SunCon-Photos.webp": {
+   "source": "level-1-underground-condo-carpark__SunCon-Photos.jpg",
+   "title": "Underground area of condominium (wiki Level 1 image)",
+   "author": "SunCon Photos",
+   "license": "CC BY 2.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Underground_area_of_condominium.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "c242-underground-garage__Emperor-Killer.webp": {
+   "source": "c242-underground-garage__Emperor-Killer.webp",
+   "title": "Level C-242 “地下停车场”: underground car park",
+   "author": "Emperor Killer",
+   "license": "CC BY-SA 3.0",
+   "filePage": "https://imgurl.diadi.cn/imgs/2026/09/b9739bb85e9f2b33.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "level-2-utility-tunnel-pipes__Honza-Groh.webp": {
+   "source": "level-2-utility-tunnel-pipes__Honza-Groh.webp",
+   "title": "Kolektory Praha, 25 (wiki Level 2 image)",
+   "author": "Honza Groh (Jagro)",
+   "license": "CC BY-SA 3.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Kolektory_Praha%2C_25.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "level-2-utility-tunnel-cables__Honza-Groh.webp": {
+   "source": "level-2-utility-tunnel-cables__Honza-Groh.webp",
+   "title": "Kolektory Praha, 43 (wiki Level 2 image)",
+   "author": "Honza Groh (Jagro)",
+   "license": "CC BY-SA 3.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Kolektory_Praha%2C_43.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "level-2-northbound-tunnel__Taber-Andrew-Bain.webp": {
+   "source": "level-2-northbound-tunnel__Taber-Andrew-Bain.webp",
+   "title": "Northbound Tunnel, VCU MCV Campus (wiki Level 2 image)",
+   "author": "Taber Andrew Bain",
+   "license": "CC BY 2.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Northbound_Tunnel%2C_VCU_MCV_Campus.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "fun-party-poster__Robert-Goerman.webp": {
+   "source": "fun-party-poster__Robert-Goerman.jpg",
+   "title": "4 Fun =) poster (Entity 67 page)",
+   "author": "Robert Goerman",
+   "license": "CC BY-SA 3.0",
+   "filePage": "https://backrooms-wiki.wikidot.com/entity-67",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "partygoer-drawing__Robert-Goerman.webp": {
+   "source": "partygoer-drawing__Robert-Goerman.jpg",
+   "title": "Partygoer (drawing on lined paper, Entity 67 page)",
+   "author": "Robert Goerman",
+   "license": "CC BY-SA 3.0",
+   "filePage": "https://backrooms-wiki.wikidot.com/entity-67",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "partygoer-berserker-drawing__Robert-Goerman.webp": {
+   "source": "partygoer-berserker-drawing__Robert-Goerman.jpg",
+   "title": "Partygoer, berserker mode (drawing, Entity 67 page)",
+   "author": "Robert Goerman",
+   "license": "CC BY-SA 3.0",
+   "filePage": "https://backrooms-wiki.wikidot.com/entity-67",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "hound-concept-art__chompgwenarts.webp": {
+   "source": "hound-concept-art__chompgwenarts.jpg",
+   "title": "Entity 8: Hounds (concept art, Entity 8 page)",
+   "author": "chompgwenarts",
+   "license": "CC BY-SA 4.0",
+   "filePage": "https://www.tumblr.com/chompgwenarts/764183878119342080?source=share",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "shower-room-tiles__Park-taeho.webp": {
+   "source": "shower-room-tiles__Park-taeho.webp",
+   "title": "Shower room (--40wiki)",
+   "author": "Park taeho",
+   "license": "CC BY-SA 4.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Shower_room_%28--40wiki%29.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "c1070-shower-window__Karry2011.webp": {
+   "source": "c1070-shower-window__Karry2011.jpg",
+   "title": "Level C-1070 “洗澡间”: shower with window (自摄)",
+   "author": "Karry2011",
+   "license": "CC BY-SA 3.0",
+   "filePage": "http://brsandbox-pro.wikidot.com/local--files/karry2012/%E6%B4%97%E6%BE%A1%E9%97%B4%EF%BC%88%E8%87%AA%E6%91%84%EF%BC%89",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  },
+  "level-37-poolrooms-2__AnarkyMusic.webp": {
+   "source": "level-37-poolrooms-2__AnarkyMusic.jpg",
+   "title": "Level 37 \"Sublimity\" Poolrooms-2",
+   "author": "u/AnarkyMusic",
+   "license": "CC BY-SA 4.0",
+   "filePage": "https://commons.wikimedia.org/wiki/File:Backrooms_Level_37_%22Sublimity%22_Poolrooms-2.jpg",
+   "modifications": "Resized to <= 512 px and re-encoded as WebP (in-world framed poster)."
+  }
+ }
+}

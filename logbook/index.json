@@ -1,0 +1,48 @@
+{
+ "header": [
+  {
+   "file": "backrooms-hand-drawn-map__StuckInLagToad.webp",
+   "title": "Backrooms Map",
+   "author": "StuckInLagToad",
+   "license": "CC BY-SA 4.0"
+  },
+  {
+   "file": "backrooms-visualized-notes__StuckInLagToad.webp",
+   "title": "Backrooms Visualized",
+   "author": "StuckInLagToad",
+   "license": "CC BY-SA 4.0"
+  },
+  {
+   "file": "level-6-hand-drawn-map__Bart0nius.webp",
+   "title": "Backrooms Level 6 hand-drawn map",
+   "author": "Bart0nius",
+   "license": "CC BY-SA 3.0"
+  }
+ ],
+ "entries": {
+  "entity:smiler": {
+   "file": "smiler-pixel-art__StuckInLagToad.webp",
+   "title": "Smiler Pixel Art",
+   "author": "StuckInLagToad",
+   "license": "CC BY-SA 4.0"
+  },
+  "entity:partygoer": {
+   "file": "partygoer-drawing__Robert-Goerman.webp",
+   "title": "Partygoer (drawing on lined paper, Entity 67 page)",
+   "author": "Robert Goerman",
+   "license": "CC BY-SA 3.0"
+  },
+  "entity:hound": {
+   "file": "hound-concept-art__chompgwenarts.webp",
+   "title": "Entity 8: Hounds (concept art, Entity 8 page)",
+   "author": "chompgwenarts",
+   "license": "CC BY-SA 4.0"
+  },
+  "item:almond_water": {
+   "file": "almond-water-bottle__XTheLock.webp",
+   "title": "Iron bottle (Object 1 Almond Water page)",
+   "author": "XTheLock_",
+   "license": "CC BY-SA 4.0"
+  }
+ }
+}

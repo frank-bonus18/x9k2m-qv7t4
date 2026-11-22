@@ -127,3 +127,23 @@ __revealAll(){
 ## 已知边界
 - 这个"全图"只影响本地地图显示，不会同步到服务器，也不改变别人看到的统计。
 - 层级直达靠客户端生成器寻路，个别层级如果 48 区块内搜不到对应区域会传送失败（此时手按 `[` `]` 换层）。
+
+---
+
+# 第三版：作弊面板（assets/cheat.js）
+
+入口换成 `assets/index-allmap.js` → `assets/boot-allmap.js`（文件名全变，为了绕开浏览器缓存）。
+`assets/index-BT_lKVZA.js` / `boot-BU4ymIed.js` 保留原件，可随时回退。
+
+boot 里 4 处小改：
+1. `d=0}return{` 前插入 `window.__hs_go={spawn,despawn,list,api,engine}` —— 把引擎和实体管理器给面板用
+2. 重力 `this.vy-=22*e` → `this.fly?(t.jump?6.5:-1.2):this.vy-22*e` —— 飞行
+3. 落地钳制前加 `!this.fly&&` —— 飞行时不会被按回地面
+4. 速度钳制后加 `this.boost` 倍率 —— 快速移动
+
+面板（左上角 ⚙）：
+- 飞行 开/关（配合跳跃键上升）
+- 速度 1× / 2.5× / 4×
+- 传送层级：20 层下拉 → `engine.locate(zone)` 再 `teleportToChunk`
+- 召唤怪物：12 种 kind，在面前 7 米生成；一键清空
+- 地图状态说明：22,302,720 格已预填

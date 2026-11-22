@@ -19,20 +19,21 @@
   function css() {
     var s = document.createElement("style");
     s.textContent = [
-      "#hsx-btn{position:fixed;left:10px;top:10px;z-index:99999;width:46px;height:46px;border-radius:50%;",
-      "background:rgba(20,18,12,.92);color:#e8e2cd;border:2px solid #d8a63a;font-size:20px;line-height:42px;",
-      "text-align:center;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}",
-      "#hsx-panel{position:fixed;left:10px;top:64px;z-index:99999;width:min(320px,calc(100vw - 20px));",
-      "max-height:calc(100vh - 80px);overflow:auto;background:rgba(14,12,9,.96);color:#e8e2cd;",
-      "border:2px solid #4a4436;border-radius:12px;padding:12px;font:13px/1.6 -apple-system,sans-serif;display:none}",
-      "#hsx-panel h3{margin:0 0 8px;font-size:14px;color:#d8a63a;letter-spacing:.08em}",
-      "#hsx-panel .row{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 10px}",
-      "#hsx-panel button{flex:1 1 auto;min-width:64px;padding:7px 8px;border-radius:8px;border:1px solid #5a5442;",
+      "#hsx-btn{position:fixed;left:10px;top:10px;z-index:99999;width:44px;height:44px;border-radius:50%;",
+      "background:rgba(20,18,12,.92);color:#e8e2cd;border:2px solid #d8a63a;font-size:18px;line-height:40px;",
+      "text-align:center;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent;box-shadow:0 0 14px rgba(216,166,58,.5)}",
+      "#hsx-panel{position:fixed;left:8px;top:60px;z-index:100000;width:min(330px,calc(100vw - 16px));",
+      "max-height:calc(100vh - 76px);overflow:auto;background:rgba(12,10,8,.97);color:#e8e2cd;",
+      "border:2px solid #d8a63a;border-radius:12px;padding:12px;font:13px/1.55 -apple-system,sans-serif;display:none}",
+      "#hsx-panel h3{margin:0 0 10px;font-size:14px;color:#d8a63a;letter-spacing:.08em}",
+      "#hsx-panel .lab{color:#a99f88;font-size:12px;margin:8px 0 4px}",
+      "#hsx-panel .row{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}",
+      "#hsx-panel button{flex:1 1 auto;min-width:60px;padding:8px;border-radius:8px;border:1px solid #5a5442;",
       "background:#211e17;color:#e8e2cd;font-size:12.5px;cursor:pointer}",
       "#hsx-panel button.on{background:#d8a63a;color:#1c1a15;border-color:#d8a63a;font-weight:700}",
-      "#hsx-panel select{width:100%;padding:7px;border-radius:8px;background:#211e17;color:#e8e2cd;border:1px solid #5a5442}",
-      "#hsx-panel .tip{color:#8f8877;font-size:11.5px;line-height:1.6}",
-      "#hsx-panel .hint{color:#7f7867;font-size:11px;margin-top:2px}"
+      "#hsx-panel select{width:100%;padding:8px;border-radius:8px;background:#211e17;color:#e8e2cd;border:1px solid #5a5442;margin-bottom:6px}",
+      "#hsx-panel .tip{color:#8f8877;font-size:11.5px;line-height:1.6;border-top:1px solid #2a2620;padding-top:8px;margin-top:4px}",
+      "#hsx-msg{min-height:16px;color:#d8a63a;font-size:12px;margin-top:6px}"
     ].join("");
     document.head.appendChild(s);
   }
@@ -40,19 +41,19 @@
   function ui(g) {
     css();
     var btn = document.createElement("button");
-    btn.id = "hsx-btn"; btn.title = "作弊面板"; btn.textContent = "⚙";
+    btn.id = "hsx-btn"; btn.textContent = "⚙";
     var panel = document.createElement("div");
     panel.id = "hsx-panel";
     panel.innerHTML = [
       '<h3>作弊面板</h3>',
-      '<div>飞行（空格/跳跃键上升）</div><div class="row" id="hsx-fly"></div>',
-      '<div>移动速度</div><div class="row" id="hsx-speed"></div>',
-      '<div>传送层级</div><div class="row"><select id="hsx-zone"></select></div>',
-      '<div class="row"><button id="hsx-go">传送到该层</button></div>',
-      '<div>召唤怪物（面前 7 米）</div><div class="row"><select id="hsx-kind"></select></div>',
-      '<div class="row"><button id="hsx-spawn">召唤</button><button id="hsx-clear">清空怪物</button></div>',
-      '<div class="tip">地图：20 层 × 33×33 区块已全部预填（22,302,720 格），打开地图按「－」缩小看全貌。</div>',
-      '<div class="hint" id="hsx-msg"></div>'
+      '<div class="lab">飞行（可穿墙，自由升降）</div><div class="row" id="hsx-fly"></div>',
+      '<div class="lab">移动速度</div><div class="row" id="hsx-speed"></div>',
+      '<div class="lab">传送到层级</div><select id="hsx-zone"></select>',
+      '<div class="row"><button id="hsx-go">传送</button></div>',
+      '<div class="lab">召唤怪物（面前 7 米）</div><select id="hsx-kind"></select>',
+      '<div class="row"><button id="hsx-spawn">召唤</button><button id="hsx-clear">清空</button></div>',
+      '<div id="hsx-msg"></div>',
+      '<div class="tip">地图：边走边点亮脚下 120 米范围（走多远就扩多大），已经走过的地方会保留。</div>'
     ].join("");
     document.body.appendChild(btn);
     document.body.appendChild(panel);
@@ -61,24 +62,28 @@
     };
 
     function msg(t) {
-      var el = document.getElementById("hsx-msg");
-      if (el) el.textContent = t;
+      document.getElementById("hsx-msg").textContent = t;
+      try { g.api && g.api.toast && g.api.toast(t, 2200); } catch (e) {}
     }
 
-    // 飞行
     var ctl = g.engine.controller;
+
+    // 飞行：升 / 悬 / 降 / 关
     var flyWrap = document.getElementById("hsx-fly");
-    [["关", false], ["开", true]].forEach(function (p) {
+    [["升", 5], ["悬", 0], ["降", -5], ["关", null]].forEach(function (p) {
       var b = document.createElement("button");
-      b.textContent = "飞行：" + p[0];
+      b.textContent = p[1] === null ? "关闭飞行" : "飞行 " + p[0];
       b.onclick = function () {
-        ctl.fly = p[1];
-        if (p[1]) { ctl.jumpBuffer = 0.2; }
+        if (p[1] === null) {
+          ctl.fly = false; ctl.flyV = undefined;
+        } else {
+          ctl.fly = true; ctl.flyV = p[1];
+          ctl.grounded = false; ctl.vy = p[1];
+        }
         [].forEach.call(flyWrap.children, function (x) { x.classList.remove("on"); });
         b.classList.add("on");
-        msg("飞行 " + (p[1] ? "已开启" : "已关闭"));
+        msg(p[1] === null ? "飞行已关闭" : "飞行 " + p[0] + "（" + (p[1] === 0 ? "悬停" : p[1] > 0 ? "上升" : "下降") + "）");
       };
-      if (!p[1]) b.classList.add("on");
       flyWrap.appendChild(b);
     });
 
@@ -106,11 +111,12 @@
     });
     document.getElementById("hsx-go").onclick = async function () {
       msg("定位中…");
+      var sel = zs.options[zs.selectedIndex].text;
       try {
         var r = await g.engine.locate(zs.value);
-        if (!r) return msg("该层附近没找到可传送区块");
+        if (!r) return msg("这一层附近没找到可传送的区块");
         await g.engine.teleportToChunk(r.cx, r.cz, r.floor);
-        msg("已传送：" + zs.options[zs.selectedIndex].text);
+        msg("已传送：" + sel);
       } catch (e) { msg("传送失败：" + e.message); }
     };
 
@@ -125,8 +131,8 @@
       try {
         var p = g.engine.player, yaw = p.yaw;
         var x = p.x - Math.sin(yaw) * 7, z = p.z - Math.cos(yaw) * 7;
-        var e = g.spawn(ks.value, x, z, yaw);
-        msg(e ? "已召唤 " + ks.value : "召唤失败（kind 无效）");
+        var ent = g.spawn(ks.value, x, z, yaw);
+        msg(ent ? "已召唤 " + ks.value : "召唤失败（该 kind 不可用）");
       } catch (e) { msg("召唤失败：" + e.message); }
     };
     document.getElementById("hsx-clear").onclick = function () {
@@ -137,16 +143,14 @@
     };
   }
 
-  // 等引擎与实体管理器就绪
   var tries = 0;
   var timer = setInterval(function () {
     tries++;
-    var g = window.__hs_go;
-    if (g && g.engine && g.engine.controller && window.__hs_panel_done !== true) {
+    if (window.__hs_go && window.__hs_go.engine && window.__hs_go.engine.controller && window.__hs_panel_done !== true) {
       window.__hs_panel_done = true;
       clearInterval(timer);
-      try { ui(g); } catch (e) { console.error("[cheat]", e); }
+      try { ui(window.__hs_go); } catch (e) { console.error("[cheat]", e); }
     }
-    if (tries > 600) clearInterval(timer); // 60s 内没就绪就放弃
+    if (tries > 900) clearInterval(timer);
   }, 100);
 })();
